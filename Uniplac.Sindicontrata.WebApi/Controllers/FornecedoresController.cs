@@ -13,11 +13,11 @@ using Uniplac.Sindicontrata.CommandQueries.FornecedorModule;
 namespace Uniplac.Sindicontrata.WebApi.Controllers
 {
     [RoutePrefix("api/fornecedores")]
-    public class FornecedorController : ApiControllerBase
+    public class FornecedoresController : ApiControllerBase
     {
         private readonly IFornecedorService _fornecedorService;
 
-        public FornecedorController(IFornecedorService fornecedorService,
+        public FornecedoresController(IFornecedorService fornecedorService,
             ILoggerFactory loggerFactory
         )
             : base(loggerFactory)

@@ -213,7 +213,7 @@
     <Compile Include="App_Start\RoutesConfig.cs" />
     <Compile Include="Binders\DataSourceRequestModelBinder.cs" />
     <Compile Include="Controllers\ApiControllerBase.cs" />
-    <Compile Include="Controllers\FornecedorController.cs" />
+    <Compile Include="Controllers\FornecedoresController.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="Common\DataSourceResultWrapper.cs" />
     <Compile Include="Factories\NinjectValidatorFactory.cs" />
