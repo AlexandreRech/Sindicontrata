@@ -19,20 +19,50 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 Acesso a Dados", "5.1 A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Sindicontrata.Infraestrutura.AcessoDados", "Uniplac.Sindicontrata.Infraestrutura.AcessoDados\Uniplac.Sindicontrata.Infraestrutura.AcessoDados.csproj", "{79F973D0-20FB-45C2-902A-AF4E519ED4EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Sindicontrata.Aplicacao", "Uniplac.Sindicontrata.Aplicacao\Uniplac.Sindicontrata.Aplicacao.csproj", "{0B5A6311-16CC-4238-807A-98164348DAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Sindicontrata.WebApi", "Uniplac.Sindicontrata.WebApi\Uniplac.Sindicontrata.WebApi.csproj", "{A541EC39-E232-43D3-B56D-72CC9D015254}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Dev-Deploy|Any CPU = Dev-Deploy|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Dev-Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Dev-Deploy|Any CPU.Build.0 = Debug|Any CPU
 		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2}.Test|Any CPU.Build.0 = Release|Any CPU
 		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Dev-Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Dev-Deploy|Any CPU.Build.0 = Debug|Any CPU
 		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{79F973D0-20FB-45C2-902A-AF4E519ED4EA}.Test|Any CPU.Build.0 = Release|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Dev-Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Dev-Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5A6311-16CC-4238-807A-98164348DAE4}.Test|Any CPU.Build.0 = Release|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Dev-Deploy|Any CPU.ActiveCfg = Dev-Deploy|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Dev-Deploy|Any CPU.Build.0 = Dev-Deploy|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{A541EC39-E232-43D3-B56D-72CC9D015254}.Test|Any CPU.Build.0 = Test|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +71,7 @@ Global
 		{AD0074B9-7EF9-4C29-B4D0-7E428F1B9DC2} = {5F657BE6-DD47-4A44-8464-9350ED77CDC8}
 		{F8A9F235-C316-4E24-8C85-AEEE3F42B485} = {D5C2827A-6620-40CD-B97F-0D0B45AE234C}
 		{79F973D0-20FB-45C2-902A-AF4E519ED4EA} = {F8A9F235-C316-4E24-8C85-AEEE3F42B485}
+		{0B5A6311-16CC-4238-807A-98164348DAE4} = {ECCA1AC4-97DA-45D0-8528-44F823BA0189}
+		{A541EC39-E232-43D3-B56D-72CC9D015254} = {654FEAB9-12E2-49A7-9902-198D96D0391B}
 	EndGlobalSection
 EndGlobal

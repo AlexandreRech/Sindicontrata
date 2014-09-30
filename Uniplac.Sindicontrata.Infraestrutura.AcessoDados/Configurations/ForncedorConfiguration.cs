@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.ModelConfiguration;
+using Uniplac.Sindicontrata.Dominio.FornecedorModule;
 
-using Uniplac.ePomar.Modelo.FornecedorModule;
 
 namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosConfigurations
 {

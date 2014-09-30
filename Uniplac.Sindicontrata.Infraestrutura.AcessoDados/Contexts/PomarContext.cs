@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Uniplac.Sindicontrata.Dominio.FornecedorModule;
 using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosConfigurations;
 
 

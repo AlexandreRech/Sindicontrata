@@ -1,5 +1,6 @@
-﻿using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosCommon;
-using Uniplac.ePomar.Modelo.FornecedorModule;
+﻿using Uniplac.Sindicontrata.Dominio.FornecedorModule;
+using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosCommon;
+
 
 namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosRepositories
 {
