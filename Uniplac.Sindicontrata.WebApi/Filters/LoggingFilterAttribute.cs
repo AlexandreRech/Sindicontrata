@@ -9,7 +9,6 @@ using System.Web.Script.Serialization;
 using Kendo.Mvc.UI;
 using Ninject;
 using Ninject.Extensions.Logging;
-using Uniplac.Sindicontrata.WebApi.Services;
 
 namespace Uniplac.Sindicontrata.WebApi.Filters
 {

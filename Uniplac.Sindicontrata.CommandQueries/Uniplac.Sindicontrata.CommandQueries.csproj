@@ -4,13 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B5A6311-16CC-4238-807A-98164348DAE4}</ProjectGuid>
+    <ProjectGuid>{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Uniplac.Sindicontrata.Aplicacao</RootNamespace>
-    <AssemblyName>Uniplac.Sindicontrata.Aplicacao</AssemblyName>
+    <RootNamespace>Uniplac.Sindicontrata.CommandQueries</RootNamespace>
+    <AssemblyName>Uniplac.Sindicontrata.CommandQueries</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.4.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,24 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FornecedorModule\FornecedorService.cs" />
+    <Compile Include="FornecedorModule\Models\CreateNewFornecedorCommand.cs" />
+    <Compile Include="FornecedorModule\Models\FornecedorListQuery.cs" />
+    <Compile Include="FornecedorModule\Models\FornecedorResumeQuery.cs" />
+    <Compile Include="FornecedorModule\Validators\CreateNewFornecedorCommandValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Uniplac.Sindicontrata.CommandQueries\Uniplac.Sindicontrata.CommandQueries.csproj">
-      <Project>{1ab0b446-e58f-4be7-a7e2-30e50b9ce12a}</Project>
-      <Name>Uniplac.Sindicontrata.CommandQueries</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Uniplac.Sindicontrata.Dominio\Uniplac.Sindicontrata.Dominio.csproj">
-      <Project>{ad0074b9-7ef9-4c29-b4d0-7e428f1b9dc2}</Project>
-      <Name>Uniplac.Sindicontrata.Dominio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Uniplac.Sindicontrata.Infraestrutura.AcessoDados\Uniplac.Sindicontrata.Infraestrutura.AcessoDados.csproj">
-      <Project>{79f973d0-20fb-45c2-902a-af4e519ed4ea}</Project>
-      <Name>Uniplac.Sindicontrata.Infraestrutura.AcessoDados</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

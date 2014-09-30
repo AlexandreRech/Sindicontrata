@@ -64,5 +64,17 @@ namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosCommon
             return dbset.Where(where).ToList();
         }
 
+        public virtual IEnumerable<T> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties)
+        {
+            IQueryable<T> query = dbset;
+
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
+
+            return query.ToList();
+        }
+
     }
 }

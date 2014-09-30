@@ -18,7 +18,6 @@ using Uniplac.Sindicontrata.WebApi.Factories;
 using Uniplac.Sindicontrata.WebApi.Interceptors;
 using Uniplac.Sindicontrata.WebApi.Loggers;
 using Uniplac.Sindicontrata.WebApi.Providers;
-using Uniplac.Sindicontrata.WebApi.Services;
 using WebApiContrib.IoC.Ninject;
 
 namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
@@ -85,6 +84,7 @@ namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
 
         private static void RegisterServices(IKernel kernel)
         {
+            /*
             kernel.Bind<IAuthService>()
                 .To<AuthServiceStub>()
                 .Intercept()
@@ -95,6 +95,7 @@ namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
                .To<EventServiceStub>()
                .Intercept()
                .With<StopWatchNinjectInterceptor>();
+             */
 
         }
     }

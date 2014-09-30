@@ -210,32 +210,20 @@
     <Compile Include="App_Start\TracingConfig.cs" />
     <Compile Include="App_Start\RoutesConfig.cs" />
     <Compile Include="Binders\DataSourceRequestModelBinder.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApiControllerBase.cs" />
-    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="Common\DataSourceResultWrapper.cs" />
-    <Compile Include="Models\CommandModels\Accounts\RegisterNewAccountCommand.cs" />
     <Compile Include="Factories\NinjectValidatorFactory.cs" />
     <Compile Include="Filters\LoggingFilterAttribute.cs" />
     <Compile Include="Filters\ValidateModelFilterAttribute.cs" />
     <Compile Include="Handlers\LanguageMessageHandlers.cs" />
     <Compile Include="Interceptors\StopWatchNinjectInterceptor.cs" />
     <Compile Include="Loggers\WebApiTracerLogger.cs" />
-    <Compile Include="Models\CommandModels\Events\CreateNewEventCommand.cs" />
-    <Compile Include="Models\QueryModels\Events\EventQuery.cs" />
-    <Compile Include="Models\QueryModels\Events\EventResumeQuery.cs" />
-    <Compile Include="Models\QueryModels\Events\EventsListQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\NinjectWebApiFilterProvider.cs" />
-    <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
-    <Compile Include="Repositories\AccountRepository.cs" />
-    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Results\NotFoundTextPlainActionResult.cs" />
-    <Compile Include="Services\EventService.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Validators\CreateNewEventCommandValidator.cs" />
-    <Compile Include="Validators\RegisterNewAccountCommandValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -257,8 +245,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Uniplac.Sindicontrata.Aplicacao\Uniplac.Sindicontrata.Aplicacao.csproj">
+      <Project>{0b5a6311-16cc-4238-807a-98164348dae4}</Project>
+      <Name>Uniplac.Sindicontrata.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.Sindicontrata.CommandQueries\Uniplac.Sindicontrata.CommandQueries.csproj">
+      <Project>{1ab0b446-e58f-4be7-a7e2-30e50b9ce12a}</Project>
+      <Name>Uniplac.Sindicontrata.CommandQueries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.Sindicontrata.Dominio\Uniplac.Sindicontrata.Dominio.csproj">
+      <Project>{ad0074b9-7ef9-4c29-b4d0-7e428f1b9dc2}</Project>
+      <Name>Uniplac.Sindicontrata.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.Sindicontrata.Infraestrutura.AcessoDados\Uniplac.Sindicontrata.Infraestrutura.AcessoDados.csproj">
+      <Project>{79f973d0-20fb-45c2-902a-af4e519ed4ea}</Project>
+      <Name>Uniplac.Sindicontrata.Infraestrutura.AcessoDados</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0CBB75
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Sindicontrata.CommandQueries", "Uniplac.Sindicontrata.CommandQueries\Uniplac.Sindicontrata.CommandQueries.csproj", "{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,14 @@ Global
 		{A541EC39-E232-43D3-B56D-72CC9D015254}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A541EC39-E232-43D3-B56D-72CC9D015254}.Test|Any CPU.ActiveCfg = Test|Any CPU
 		{A541EC39-E232-43D3-B56D-72CC9D015254}.Test|Any CPU.Build.0 = Test|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Dev-Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Dev-Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A}.Test|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +90,6 @@ Global
 		{79F973D0-20FB-45C2-902A-AF4E519ED4EA} = {F8A9F235-C316-4E24-8C85-AEEE3F42B485}
 		{0B5A6311-16CC-4238-807A-98164348DAE4} = {ECCA1AC4-97DA-45D0-8528-44F823BA0189}
 		{A541EC39-E232-43D3-B56D-72CC9D015254} = {654FEAB9-12E2-49A7-9902-198D96D0391B}
+		{1AB0B446-E58F-4BE7-A7E2-30E50B9CE12A} = {ECCA1AC4-97DA-45D0-8528-44F823BA0189}
 	EndGlobalSection
 EndGlobal
