@@ -19,6 +19,14 @@ using Uniplac.Sindicontrata.WebApi.Interceptors;
 using Uniplac.Sindicontrata.WebApi.Loggers;
 using Uniplac.Sindicontrata.WebApi.Providers;
 using WebApiContrib.IoC.Ninject;
+using System.Collections.ObjectModel;
+using System.Web.Compilation;
+using System.IO;
+using Uniplac.Sindicontrata.Aplicacao.FornecedorModule;
+using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosCommon;
+using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosContexts;
+using Uniplac.Sindicontrata.Dominio.FornecedorModule;
+using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosRepositories;
 
 namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
 {
@@ -73,8 +81,10 @@ namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
 
             kernel.Bind<IValidatorFactory>().To<NinjectValidatorFactory>().InSingletonScope();
 
+            Assembly assembly = AssemblyLocator.GetAssemblyByName("Uniplac.Sindicontrata.CommandQueries");
+
             //Register all validators in project
-            AssemblyScanner.FindValidatorsInAssembly(Assembly.GetExecutingAssembly())
+            AssemblyScanner.FindValidatorsInAssembly(assembly)
                 .ForEach(match => kernel.Bind(match.InterfaceType)
                     .To(match.ValidatorType));
 
@@ -83,20 +93,76 @@ namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
         }
 
         private static void RegisterServices(IKernel kernel)
-        {
-            /*
-            kernel.Bind<IAuthService>()
-                .To<AuthServiceStub>()
-                .Intercept()
-               .With<StopWatchNinjectInterceptor>();
+        {          
+            kernel.Bind<IDatabaseFactory>()
+               .To<DatabaseFactory>()
+               .InRequestScope();
 
+            kernel.Bind<IUnitOfWork>()
+               .To<UnitOfWork>()
+               .InRequestScope();
 
-            kernel.Bind<IEventService>()
-               .To<EventServiceStub>()
+            kernel.Bind<SindicontrataContext>()
+                .ToSelf()
+                .InRequestScope();               
+
+            kernel.Bind<IFornecedorService>()
+               .To<FornecedorService>()
                .Intercept()
                .With<StopWatchNinjectInterceptor>();
-             */
 
+            kernel.Bind<IFornecedorRepository>()
+               .To<FornecedorRepository>();
+               
+        }
+    }
+
+    public static class AssemblyLocator
+    {
+        private static readonly ReadOnlyCollection<Assembly> AllAssemblies;
+        private static readonly ReadOnlyCollection<Assembly> BinAssemblies;
+
+        static AssemblyLocator()
+        {
+            AllAssemblies = new ReadOnlyCollection<Assembly>(
+                BuildManager.GetReferencedAssemblies().Cast<Assembly>().ToList());
+
+            IList<Assembly> binAssemblies = new List<Assembly>();
+
+            string binFolder = HttpRuntime.AppDomainAppPath + "bin\\";
+            IList<string> dllFiles = Directory.GetFiles(binFolder, "*.dll",
+                SearchOption.TopDirectoryOnly).ToList();
+
+            foreach (string dllFile in dllFiles)
+            {
+                AssemblyName assemblyName = AssemblyName.GetAssemblyName(dllFile);
+
+                Assembly locatedAssembly = AllAssemblies.FirstOrDefault(a =>
+                    AssemblyName.ReferenceMatchesDefinition(
+                        a.GetName(), assemblyName));
+
+                if (locatedAssembly != null)
+                {
+                    binAssemblies.Add(locatedAssembly);
+                }
+            }
+
+            BinAssemblies = new ReadOnlyCollection<Assembly>(binAssemblies);
+        }
+
+        public static Assembly GetAssemblyByName(string name)
+        {
+            return AllAssemblies.First(x => x.FullName.Contains(name));
+        }
+
+        public static ReadOnlyCollection<Assembly> GetAssemblies()
+        {
+            return AllAssemblies;
+        }
+
+        public static ReadOnlyCollection<Assembly> GetBinFolderAssemblies()
+        {
+            return BinAssemblies;
         }
     }
 }

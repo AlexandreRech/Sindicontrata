@@ -11,6 +11,6 @@ namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosRepositories
             : base(dbFactory)
         {
 
-        }        
+        }
     }
 }

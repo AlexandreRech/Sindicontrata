@@ -8,7 +8,7 @@ namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosContexts
     public class SindicontrataContext : DbContext
     {
         public SindicontrataContext()
-            : base("SindicontrataConnectionString")
+            : base("SindicontrataContext")
         {
 
         }
