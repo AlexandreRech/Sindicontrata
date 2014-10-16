@@ -44,10 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FornecedorModule\Models\CreateNewFornecedorCommand.cs" />
-    <Compile Include="FornecedorModule\Models\FornecedorListQuery.cs" />
-    <Compile Include="FornecedorModule\Models\FornecedorResumeQuery.cs" />
-    <Compile Include="FornecedorModule\Validators\CreateNewFornecedorCommandValidator.cs" />
+    <Compile Include="ContractorModule\Models\CreateNewContractorCommand.cs" />
+    <Compile Include="ContractorModule\Models\ContractorListQuery.cs" />
+    <Compile Include="ContractorModule\Models\ContractorResumeQuery.cs" />
+    <Compile Include="ContractorModule\Validators\CreateNewContractorCommandValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

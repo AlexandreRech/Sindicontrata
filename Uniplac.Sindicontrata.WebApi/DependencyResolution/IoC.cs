@@ -22,10 +22,10 @@ using WebApiContrib.IoC.Ninject;
 using System.Collections.ObjectModel;
 using System.Web.Compilation;
 using System.IO;
-using Uniplac.Sindicontrata.Aplicacao.FornecedorModule;
+using Uniplac.Sindicontrata.Aplicacao.ContractorModule;
 using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosCommon;
 using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosContexts;
-using Uniplac.Sindicontrata.Dominio.FornecedorModule;
+using Uniplac.Sindicontrata.Dominio.ContractorModule;
 using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosRepositories;
 
 namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
@@ -106,13 +106,13 @@ namespace Uniplac.Sindicontrata.WebApi.DependencyResolution
                 .ToSelf()
                 .InRequestScope();               
 
-            kernel.Bind<IFornecedorService>()
-               .To<FornecedorService>()
+            kernel.Bind<IContractorService>()
+               .To<ContractorService>()
                .Intercept()
                .With<StopWatchNinjectInterceptor>();
 
-            kernel.Bind<IFornecedorRepository>()
-               .To<FornecedorRepository>();
+            kernel.Bind<IContractorRepository>()
+               .To<ContractorRepository>();
                
         }
     }

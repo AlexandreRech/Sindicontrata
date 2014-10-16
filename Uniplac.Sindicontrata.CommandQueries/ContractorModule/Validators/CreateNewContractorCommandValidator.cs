@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using FluentValidation;
-using Uniplac.Sindicontrata.CommandQueries.FornecedorModule;
+using Uniplac.Sindicontrata.CommandQueries.ContractorModule;
 
 namespace Uniplac.Sindicontrata.WebApi.Validators
 {
-    public class CreateNewFornecedorCommandValidator : AbstractValidator<CreateNewFornecedorCommand>
+    public class CreateNewContractorCommandValidator : AbstractValidator<CreateNewContractorCommand>
     {
-        public CreateNewFornecedorCommandValidator()
+        public CreateNewContractorCommandValidator()
         {            
             RuleFor(x => x.Nome)
                  .NotEmpty()

@@ -54,7 +54,7 @@
     <Compile Include="Common\IUnitOfWork.cs" />
     <Compile Include="Common\RepositoryBase.cs" />
     <Compile Include="Common\UnitOfWork.cs" />
-    <Compile Include="Configurations\ForncedorConfiguration.cs" />
+    <Compile Include="Configurations\ContractorConfiguration.cs" />
     <Compile Include="Contexts\SindicontrataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FornecedorRepository.cs" />

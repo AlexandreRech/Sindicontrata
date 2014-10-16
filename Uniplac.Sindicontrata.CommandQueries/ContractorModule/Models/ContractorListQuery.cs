@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Uniplac.Sindicontrata.CommandQueries.FornecedorModule.Models
+namespace Uniplac.Sindicontrata.CommandQueries.ContractorModule.Models
 {
-    public class FornecedorListQuery
+    public class ContractorListQuery
     {
         public long Id { get; set; }
 

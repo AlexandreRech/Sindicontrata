@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Uniplac.Sindicontrata.WebApi.Validators;
 
-namespace Uniplac.Sindicontrata.CommandQueries.FornecedorModule
+namespace Uniplac.Sindicontrata.CommandQueries.ContractorModule
 {
-    [Validator(typeof(CreateNewFornecedorCommandValidator))]
-    public class CreateNewFornecedorCommand
+    [Validator(typeof(CreateNewContractorCommandValidator))]
+    public class CreateNewContractorCommand
     {
         public long Id { get; set; }
 

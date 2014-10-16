@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FornecedorModule\Fornecedor.cs" />
-    <Compile Include="FornecedorModule\IFornecedorRepository.cs" />
+    <Compile Include="ContractorModule\Contractor.cs" />
+    <Compile Include="ContractorModule\IContractorRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

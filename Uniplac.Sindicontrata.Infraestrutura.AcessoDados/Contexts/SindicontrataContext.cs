@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
-using Uniplac.Sindicontrata.Dominio.FornecedorModule;
+using Uniplac.Sindicontrata.Dominio.ContractorModule;
 using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosConfigurations;
-
 
 namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosContexts
 {
@@ -13,13 +12,11 @@ namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosContexts
 
         }
 
-        public DbSet<Fornecedor> Fornecedores { get; set; }
-       
+        public DbSet<Contractor> Contractor { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new FornecedorConfiguration());
+            modelBuilder.Configurations.Add(new ContractorConfiguration());
         }
     }
-
- 
 }

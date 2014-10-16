@@ -1,12 +1,11 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Uniplac.Sindicontrata.Dominio.FornecedorModule;
-
+using Uniplac.Sindicontrata.Dominio.ContractorModule;
 
 namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosConfigurations
 {
-    internal class FornecedorConfiguration : EntityTypeConfiguration<Fornecedor>
+    internal class ContractorConfiguration : EntityTypeConfiguration<Contractor>
     {
-        public FornecedorConfiguration()
+        public ContractorConfiguration()
         {            
             HasKey(x => x.Id);
 
