@@ -11,7 +11,7 @@ namespace Uniplac.Sindicontrata.WebApi.Validators
     {
         public CreateNewContractorCommandValidator()
         {            
-            RuleFor(x => x.Nome)
+            RuleFor(x => x.Name)
                  .NotEmpty()
                 .NotNull();            
         }

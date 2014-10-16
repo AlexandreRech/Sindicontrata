@@ -9,7 +9,7 @@ namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosConfigurations
         {            
             HasKey(x => x.Id);
 
-            Property(x => x.Nome);
+            Property(x => x.Name);
         }
     }
 }

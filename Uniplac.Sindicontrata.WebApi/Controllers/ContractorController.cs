@@ -18,7 +18,7 @@ namespace Uniplac.Sindicontrata.WebApi.Controllers
         {
             _ContractorService = ContractorService;
         }
-        
+
         [Route("")]
         public IHttpActionResult GetAllContractors()
         {
@@ -47,7 +47,7 @@ namespace Uniplac.Sindicontrata.WebApi.Controllers
 
         public IHttpActionResult PostCreateNewContractor([FromBody]CreateNewContractorCommand ContractorCommand)
         {
-            ContractorCommand = _ContractorService.CreateNewContractor(ContractorCommand);            
+            ContractorCommand = _ContractorService.CreateNewContractor(ContractorCommand);
 
             var link = Url.Link("GetContractorById", new { id = ContractorCommand.Id });
 

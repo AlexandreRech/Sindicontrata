@@ -37,7 +37,7 @@ namespace Uniplac.Sindicontrata.Aplicacao.ContractorModule
                 new ContractorListQuery
                 {
                     Id = entity.Id,
-                    Nome = entity.Nome
+                    Nome = entity.Name
                 });
         }
 
@@ -48,7 +48,7 @@ namespace Uniplac.Sindicontrata.Aplicacao.ContractorModule
             return new ContractorResumeQuery
                 {
                     Id = entity.Id,
-                    Nome = entity.Nome
+                    Nome = entity.Name
                 };
         }
 
@@ -56,7 +56,7 @@ namespace Uniplac.Sindicontrata.Aplicacao.ContractorModule
         {
             var entity = new Contractor
                 {
-                    Nome = ContractorCommand.Nome
+                    Name = ContractorCommand.Name
                 };
 
             entity.Validates();
