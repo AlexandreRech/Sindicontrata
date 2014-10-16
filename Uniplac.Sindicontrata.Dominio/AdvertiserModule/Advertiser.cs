@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using Uniplac.Sindicontrata.Dominio.AdvertisementModule;
 
-namespace Uniplac.Sindicontrata.Dominio.ContractorModule
+namespace Uniplac.Sindicontrata.Dominio.AdvertiserModule
 {
-    public class Contractor
+    public class Advertiser
     {
         public long Id { get; set; }
 
@@ -14,10 +16,12 @@ namespace Uniplac.Sindicontrata.Dominio.ContractorModule
 
         public int Phone { get; set; }
 
+        public IEnumerable<Advertisement> Advertisements { get; set; }
+
         public void Validates()
         {
             if (string.IsNullOrEmpty(Name))
-                throw new ArgumentNullException("O nome do contratante não pode estar branco.");
+                throw new ArgumentNullException("O nome do anunciante não pode estar branco.");
         }
 
         public override string ToString()

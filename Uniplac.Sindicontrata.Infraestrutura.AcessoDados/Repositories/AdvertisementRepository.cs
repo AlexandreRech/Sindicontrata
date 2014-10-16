@@ -1,12 +1,12 @@
 ﻿using System.Data.Entity;
-using Uniplac.Sindicontrata.Dominio.ContractorModule;
+using Uniplac.Sindicontrata.Dominio.AdvertisementModule;
 using Uniplac.Sindicontrata.Infraestrutura.AcessoDadosCommon;
 
 namespace Uniplac.Sindicontrata.Infraestrutura.AcessoDadosRepositories
 {
-    public class ContractorRepository : RepositoryBase<Contractor>, IContractorRepository
+    public class AdvertisementRepository : RepositoryBase<Advertisement>, IAdvertisementRepository
     {
-        public ContractorRepository(IDatabaseFactory dbFactory)
+        public AdvertisementRepository(IDatabaseFactory dbFactory)
             : base(dbFactory)
         {
 

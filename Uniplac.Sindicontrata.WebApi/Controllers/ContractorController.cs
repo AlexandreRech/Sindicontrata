@@ -45,7 +45,8 @@ namespace Uniplac.Sindicontrata.WebApi.Controllers
             return Ok(model);
         }
 
-        public IHttpActionResult PostCreateNewContractor([FromBody]CreateNewContractorCommand ContractorCommand)
+        [Route("")]
+        public IHttpActionResult PostCreateNewContractor(CreateNewContractorCommand ContractorCommand)
         {
             ContractorCommand = _ContractorService.CreateNewContractor(ContractorCommand);
 

@@ -39,11 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressModule\Address.cs" />
+    <Compile Include="AddressModule\IAddressRepository.cs" />
+    <Compile Include="AdvertisementCategoryModule\AdvertisementCategory.cs" />
+    <Compile Include="AdvertisementCategoryModule\IAdvertisementCategoryRepository.cs" />
+    <Compile Include="AdvertisementModule\Advertisement.cs" />
+    <Compile Include="AdvertisementModule\Enum\AdvertisementType.cs" />
+    <Compile Include="AdvertisementModule\IAdvertisementRepository.cs" />
+    <Compile Include="AdvertiserModule\Advertiser.cs" />
+    <Compile Include="AdvertiserModule\IAdvertiserRepository.cs" />
     <Compile Include="ContractorModule\Contractor.cs" />
     <Compile Include="ContractorModule\IContractorRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

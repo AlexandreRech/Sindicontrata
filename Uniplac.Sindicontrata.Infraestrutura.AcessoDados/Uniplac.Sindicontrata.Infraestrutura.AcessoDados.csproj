@@ -54,9 +54,17 @@
     <Compile Include="Common\IUnitOfWork.cs" />
     <Compile Include="Common\RepositoryBase.cs" />
     <Compile Include="Common\UnitOfWork.cs" />
+    <Compile Include="Configurations\AddressConfiguration.cs" />
+    <Compile Include="Configurations\AdvertisementCategoryConfiguration.cs" />
+    <Compile Include="Configurations\AdvertisementConfiguration.cs" />
+    <Compile Include="Configurations\AdvertiserConfiguration.cs" />
     <Compile Include="Configurations\ContractorConfiguration.cs" />
     <Compile Include="Contexts\SindicontrataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AdvertisementCategoryRepository.cs" />
+    <Compile Include="Repositories\AdvertisementRepository.cs" />
+    <Compile Include="Repositories\AdvertiserRepository.cs" />
+    <Compile Include="Repositories\AddressRepository.cs" />
     <Compile Include="Repositories\ContractorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
