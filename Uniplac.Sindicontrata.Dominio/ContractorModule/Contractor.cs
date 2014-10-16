@@ -11,7 +11,7 @@ namespace Uniplac.Sindicontrata.Dominio.ContractorModule
         public void Validates()
         {
             if (string.IsNullOrEmpty(Nome))
-                throw new ArgumentNullException("O nome do Contractor não pode estar branco.");
+                throw new ArgumentNullException("O nome do contratante não pode estar branco.");
         }
 
         public override string ToString()
